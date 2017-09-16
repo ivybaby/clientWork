@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/linkstyle.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <!-- 省略号 -->
+    <script type="text/javascript" src="js/clamp.min.js" ></script>
+    
+</head>
+<body>
+	<div id="feedbackIndex">
+		<nav class="nav">
+           <h1 class="text-center">事件处理</h1>
+        </nav>
+        <form>
+        	<!-- box-list start -->
+        	<div class="box-list cl">
+        		<div class="box-head cl">
+        			<p>事件详情</p>
+        		</div>
+        		<div class="box-body cl">
+        			<ul>
+        				<li class="small cl row">
+        					<span class="col-sm-6">客户姓名:<em>张小飞</em></span><span class="col-sm-6">联系电话:<em>1573632890</em></span>
+        				</li>
+        				<li class="small cl">
+        					<span class="col-sm-6">客户身份:<em>会员</em></span><span class="col-sm-6">处理状态:<em class="text-danger">未处理</em></span>
+        			    </li>
+        			</ul>
+        		</div>
+        	</div>
+        	<!-- box-list end -->
+        	
+        	<div class="situation-table">
+        		<!-- situation-table-cell start -->
+        		<div class="situation-table-cell">
+        			<div class="cell-head">
+        				<label class="text-danger">处理情况1</label><span class="text-warning pull-right">2016-11-12&nbsp;14:20</span>
+        			</div>
+        			<div class="cell-body">
+        				<p class="text-warning over-word">lalallalalallaaaaaaaaaaaaaaaaaaaaaalalallalalallaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal</p>
+        				<div class="row cell-body-img">
+        					<div class="col-sm-3">
+        						<img src="img/two_dimension_code_icon.png"  />
+        					</div>
+        					<div class="col-sm-3">
+        						<img src="img/two_dimension_code_icon.png"  />
+        					</div>
+        					<div class="col-sm-3">
+        						<img src="img/two_dimension_code_icon.png"  />
+        					</div>
+        					<div class="col-sm-3">
+        						<img src="img/two_dimension_code_icon.png"  />
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        		<!-- situation-table-cell end -->
+        		
+        		<!-- situation-table-cell start -->
+        		<div class="situation-table-cell">
+        			<div class="cell-head">
+        				<label class="text-danger">处理情况1</label><span class="text-warning pull-right">2016-11-12&nbsp;14:20</span>
+        			</div>
+        			<div class="cell-body">
+        				<p class="text-warning over-word">lalallalalallaaaaaaaaaaaaaaaaaaaaaalalallalalallaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaal</p>
+        				<div class="row cell-body-img">
+        					<div class="col-sm-3">
+        						<img src="img/receipt.jpg"  />
+        					</div>
+        					<div class="col-sm-3">
+        						<img src="img/two_dimension_code_icon.png"  />
+        					</div>
+        					<div class="col-sm-3">
+        						<img src="img/bb.jpg"  />
+        					</div>
+        					<div class="col-sm-3">
+        						<img src="img/two_dimension_code_icon.png"  />
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        		<!-- situation-table-cell end -->
+        		
+        	</div>
+        	
+        	<!-- dealfeedback start -->
+        	<div class="dealfeedback">
+        		<div class="situation-table">
+        		<!-- situation-table-cell start -->
+        		<div class="situation-table-cell">
+        			<div class="cell-head">
+        				<label class="text-danger">处理反馈单</label>
+        			</div>
+        			<div class="cell-body">
+        				<p >处理状态：<input type="radio" name="complete" id="uncomplete" /><label class="text-warning" for="uncomplete">未完成</label><input id="complete" type="radio" name="complete" /><label for="complete" class="text-warning">已完成</label></p>
+        				<div class="row">
+        					<p>处理情况</p>
+        					<textarea class="text-danger textarea">请填写详细地址</textarea>
+        				</div>
+        				
+        				<div class="row">
+        					<div class="container">
+        <!--    照片添加    -->
+        <div class="z_photo">
+            <div class="z_file">
+                <input type="file" name="file" id="file" value="" accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+            </div>
+        </div>
+
+        <!--遮罩层-->
+        <div class="z_mask">
+            <!--弹出框-->
+            <div class="z_alert">
+                <p>确定要删除图片？</p>
+                <p>
+                    <span class="z_cancel">取消</span>
+                    <span class="z_sure">确定</span>
+                </p>
+            </div>
+        </div>
+    </div>
+        				</div>
+        				
+        				
+        			</div>
+        		</div>
+        		<!-- situation-table-cell end -->
+        	
+        	   </div>
+        	   
+        	    <div class="row padding-15" style="margin: 40px 0 40px;">
+        		            <button class="btn btn-primary btn-tip">提交</button>
+        	    </div>
+        	</div>
+        	<!-- dealfeedback end --> 
+        	
+        	<div class="row padding-15" style="margin: 40px 0 40px;">
+        		<button class="btn btn-primary btn-change">接受任务</button>
+        	</div>
+        	
+        	
+        </form>
+	</div>
+	<script type="text/javascript" src="js/normal-js.js" ></script>
+	<script>
+	$(function(){
+		/*省略号 start*/
+		var $obj=$(".situation-table");
+		$(".over-word").each(function(i){
+			var id="clampjs"+i+"";
+			$(this).attr({"id":id});
+			
+			$clamp(document.getElementById(id), {clamp: 2});
+		});
+		/*省略号 end*/
+		
+		$(".cell-body-img img").each(function(){
+			var op=$(this).outerWidth();
+			$(this).css({"height":op+'px'});
+		});
+		
+		
+		/*接受任务 btn*/
+		$(".btn-change").on("click",function(e){
+			e.preventDefault();
+			$(".dealfeedback").css({"display":"block"});
+			$(this).hide();
+			var oWidth=$(".z_photo").outerWidth()*0.25-5;
+		    $(".z_file").css({"height":oWidth+'px',"width":oWidth+'px'});
+		});
+		
+		$(".btn-tip").on("click",function(e){
+			e.preventDefault();
+			$.fn.tips({
+        		tipInsert:"#feedbackIndex form",
+        		tipName:"#tips",
+        		tipContent:"感谢您的反馈，我们会继续改进！",
+        		tipArea:".textarea"
+        	   });
+		});
+		
+		
+	});
+ </script>
+  <script type="text/javascript">
+    
+        function imgChange(obj1, obj2) {
+            //获取点击的文本框
+            var file = document.getElementById("file");
+            //存放图片的父级元素
+            var imgContainer = document.getElementsByClassName(obj1)[0];
+            //获取的图片文件
+            var fileList = file.files;
+            //文本框的父级元素
+            var input = document.getElementsByClassName(obj2)[0];
+            var imgArr = [];
+            //遍历获取到得图片文件
+            for (var i = 0; i < fileList.length; i++) {
+            
+                var imgUrl = window.URL.createObjectURL(file.files[i]);
+                imgArr.push(imgUrl);
+                var img = document.createElement("img");
+                img.setAttribute("src", imgArr[i]);
+                
+                img.style.height=($(".z_photo").outerWidth()*0.25-5)+'px';
+                var imgAdd = document.createElement("div");
+                var iconAdd = document.createElement("img");
+                iconAdd.setAttribute("src", "img/cancel_icon.png");
+                iconAdd.setAttribute("class", "z_iconImg");
+                
+                imgAdd.setAttribute("class", "z_addImg");
+                imgAdd.appendChild(img);
+                imgAdd.appendChild(iconAdd);
+                imgContainer.appendChild(imgAdd);
+                $(".z_file").appendTo(".z_photo");
+                if($(".z_addImg").length>3){
+                	$(".z_file").hide();
+                }
+            };
+            imgRemove();
+        };
+        
+        /*删除图片*/
+        function imgRemove() {
+            var imgList = document.getElementsByClassName("z_addImg");
+            var mask = document.getElementsByClassName("z_mask")[0];
+            var cancel = document.getElementsByClassName("z_cancel")[0];
+            var sure = document.getElementsByClassName("z_sure")[0];
+            for (var j = 0; j < imgList.length; j++) {
+                imgList[j].index = j;
+                imgList[j].onclick = function() {
+                    var t = this;
+                    mask.style.display = "block";
+                    cancel.onclick = function() {
+                        mask.style.display = "none";
+                    };
+                    sure.onclick = function() {
+                        mask.style.display = "none";
+                        t.style.display = "none";
+                    };
+                    if($(".z_addImg").length>3){
+                	    $(".z_file").show();
+                    }
+                }
+            };
+        };
+</script>
+</body>
+</html>
